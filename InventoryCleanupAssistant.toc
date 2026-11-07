@@ -1,0 +1,29 @@
+## Interface: 120100, 120105
+## Title: Inventory Cleanup Assistant
+## Notes: Review items and choose what to sell at vendors. Poor items are selected by default. Type /ica to configure.
+## Author: Skarlex
+## Version: 1.0.0
+## IconTexture: Interface\AddOns\InventoryCleanupAssistant\ica
+## SavedVariables: InventoryCleanupAssistantDB
+## AddonCompartmentFunc: InventoryCleanupAssistant_Toggle
+
+core/Bootstrap.lua
+core/items/ItemInfo.lua
+core/data/Database.lua
+core/inventory/Scanner.lua
+core/farming/Tracking.lua
+core/farming/Stacks.lua
+core/farming/Items.lua
+core/merchant/Merchant.lua
+core/events/Events.lua
+
+ui/shared/Theme.lua
+ui/shared/Builders.lua
+ui/support/Discord.lua
+ui/main/Rows.lua
+ui/main/InventoryList.lua
+ui/main/WindowFrames.lua
+ui/main/WindowControls.lua
+ui/main/Window.lua
+ui/farm/Items.lua
+ui/farm/Window.lua

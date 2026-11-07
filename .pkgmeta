@@ -1,0 +1,5 @@
+package-as: Inventory Cleanup Assistant
+
+manual-changelog:
+    filename: changelog.md
+    markup-type: markdown

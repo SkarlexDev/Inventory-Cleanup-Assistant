@@ -18,12 +18,6 @@ function addon:InitializeDatabase()
     if self.db.showZeroValue == nil then
         self.db.showZeroValue = self.db.ignoreZeroValue ~= true
     end
-    if self.db.sellFarmReagents == nil then
-        self.db.sellFarmReagents = false
-    end
-    if self.db.enableFarmLoot == nil then
-        self.db.enableFarmLoot = true
-    end
     self.db.ignoreZeroValue = nil
     self.db.windowWidth = nil
     self.db.windowHeight = nil

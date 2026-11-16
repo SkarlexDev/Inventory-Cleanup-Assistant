@@ -175,36 +175,9 @@ function UI:CreateSettingsPanel(window)
     local heading = self:CreateFont(panel, "SETTINGS", "GameFontNormalLarge",
         "TOPLEFT", panel, "TOPLEFT", 16, -16)
     heading:SetTextColor(unpack(self.COLORS.accent))
-    local description = self:CreateFont(panel, "Inventory and Farm Loot options.",
+    local description = self:CreateFont(panel, "Inventory options.",
         "GameFontHighlightSmall", "TOPLEFT", heading, "BOTTOMLEFT", 0, -8)
     description:SetTextColor(unpack(self.COLORS.muted))
 
-    self.farmLootToggle = self:CreateActionButton(panel, 172)
-    self.farmLootToggle:SetPoint("TOPLEFT", description, "BOTTOMLEFT", 0, -18)
-    self.farmLootToggle:SetScript("OnClick", function()
-        addon:SetFarmLootEnabled(not addon.db.enableFarmLoot)
-    end)
-
-    self.farmLootDescription = self:CreateFont(panel,
-        "Automatically tracks bag loot and opens Farm Loot when entering an instance.",
-        "GameFontHighlightSmall", "TOPLEFT", self.farmLootToggle, "BOTTOMLEFT", 0, -8)
-    self.farmLootDescription:SetWidth(420)
-    self.farmLootDescription:SetJustifyH("LEFT")
-    self.farmLootDescription:SetTextColor(unpack(self.COLORS.muted))
-    self:CreateDiscordSupport(panel, self.farmLootDescription)
-    self:RefreshSettings()
-end
-
-function UI:RefreshSettings()
-    if not self.farmLootToggle or not addon.db then
-        return
-    end
-
-    local enabled = addon.db.enableFarmLoot
-    self.farmLootToggle.label:SetText(enabled
-        and "FARM LOOT  |cff42a882ENABLED|r"
-        or "FARM LOOT  |cffe05a61DISABLED|r")
-    self.farmLootDescription:SetText(enabled
-        and "Automatically tracks bag loot and opens Farm Loot when entering an instance."
-        or "Automatic tracking, auto-sell, and instance popups are disabled.")
+    self:CreateDiscordSupport(panel, description)
 end

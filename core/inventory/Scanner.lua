@@ -45,8 +45,6 @@ function addon:ScanBags()
                         count = bagItem.stackCount or 1,
                         sellPrice = type(price) == "number" and price or 0,
                         quality = quality,
-                        classID = classID,
-                        isReagent = classID == self.constants.tradeGoodsItemClass,
                         isLocked = bagItem.isLocked,
                         hasNoValue = bagItem.hasNoValue,
                         hasLoot = bagItem.hasLoot,
@@ -82,6 +80,5 @@ function addon:ScanBags()
         end
     end
 
-    self:UpdateFarmTracking()
     self:RefreshUI()
 end

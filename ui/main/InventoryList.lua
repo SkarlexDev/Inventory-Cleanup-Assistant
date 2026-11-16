@@ -159,7 +159,7 @@ function UI:Refresh()
     self.zeroValueFilter.label:SetText(addon.db.showZeroValue
         and "SHOW 0-VALUE  |cff42a882ON|r"
         or "SHOW 0-VALUE  |cffe05a61OFF|r")
-    self:RefreshSettings()
+
     if self.page == "settings" then
         return
     end

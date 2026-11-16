@@ -22,7 +22,6 @@ function UI:SetMainViewShown(shown)
         self.scrollFrame,
         self.scrollTrack,
         self.status,
-        self.farmButton,
     }) do
         frame:SetShown(shown)
     end
@@ -69,7 +68,6 @@ function UI:Create()
     self:CreateFilters(window, tabBar)
     self:CreateItemList(window, tabBar)
     self:CreateFooter(window)
-    self:CreateFarmButton(window)
     self.header = header
     self:CreateSettingsPanel(window)
     self.page = "inventory"

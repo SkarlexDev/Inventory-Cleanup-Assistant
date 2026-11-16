@@ -6,7 +6,6 @@ addon.constants = {
     maxQuality = 4,
     maxItemInfoRequests = 2,
     questItemClass = Enum and Enum.ItemClass and Enum.ItemClass.Questitem or 12,
-    tradeGoodsItemClass = Enum and Enum.ItemClass and Enum.ItemClass.Tradegoods or 7,
     excludedNameParts = { "hearthstone" },
 }
 
@@ -21,15 +20,6 @@ addon.statusText = "Selected items are sold when you open a vendor."
 addon.merchantOpen = false
 addon.isSelling = false
 addon.pendingItemInfo = false
-addon.farmItems = {}
-addon.farmBagCounts = {}
-addon.farmCurrentItems = {}
-addon.farmTracking = false
-addon.farmInitialized = false
-addon.farmBaselinePending = false
-addon.farmBaselineGeneration = 0
-addon.farmWindowShouldBeOpen = false
-addon.farmAutoSell = false
 
 function addon:ScheduleScan()
     if addon.scanQueued then
